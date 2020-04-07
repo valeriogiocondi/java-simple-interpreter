@@ -1,5 +1,8 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 import java.util.concurrent.Callable;
 
 class Interpreter {
@@ -7,7 +10,26 @@ class Interpreter {
     public static void main(String args[]) {
 
         // System.out.print("\n\n Hello world! \n\n");
+        
+        System.out.print("\n\n");
 
+        try {
+
+            File myObj = new File("program.txt");
+            Scanner myReader = new Scanner(myObj);
+
+            while (myReader.hasNextLine()) {
+
+              String data = myReader.nextLine();
+              System.out.println(data);
+            }
+            myReader.close();
+
+          } catch (FileNotFoundException e) {
+
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
     }
 
 
