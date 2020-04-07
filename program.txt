@@ -1,0 +1,6 @@
+REM programma semplice
+$0 = 0+5+10
+IF $0 > 5 THEN PRINT "maggiore!" ELSE PRINT "minore"
+$1 = "a"+"b"+"c"
+WHILE $0 < 10 DO PRINT $0 : $0 = $0 + 1
+END
